@@ -1,0 +1,258 @@
+@import "Atom.css";
+@font-face {
+    font-family: 'vz';
+    src: url('../fonts/vazir.eot') format('eot'),
+         url('../fonts/vazir.ttf')  format('truetype'),
+         url('../fonts/vazir.woff') format('woff2'),
+         url('../fonts/vazir.woff2') format('woff')
+  }
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'vz';
+}
+/* اینجا با دادن over flow با مقدار hidden و  position با مقدار relative از بیرون زدگی بقیه عکس آسمان جلوگیری کردیم .*/
+.header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* عکس درخت هارو آوردیم و به چپ و راست چسبوندیم فاصلش از پایین هم با استفاده از bottom با مقدار 0 کم کردیم */
+.tree {
+    position:absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+/* تصویر بزرگ آسمان هست . از هر چهار طرف چسبوندیمش . با دادن height با مقدار 100 درصد اطمینان حاصل کردیم تا بیش تر از پدرش بیرون نزنه . البته بالاتر بااور فلو این امکان رو بررسی کرده بودیم*/
+.sky {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+/* چون ارتفاع height پدرش 100 وی اچ بود گفتیم که بیش تر بیرون نزنه*/
+
+
+/* ماه هم چون قرار بود بره زیر درخت ها باهاش بازی کردیم*/
+.moon {
+    top: 73%;
+    left: 45.5%;
+    width: 150px;
+    position: absolute;
+}
+
+
+/*
+چون چند تا عکس با هم پوزیشن ابسولوت گرفته بودن افتاده بودن رو هم دیگه با دادن زد ایندکس با مقدار 2 و و پوزیشن ابسولوت به تگ پدر آوردیمش و روی همه عکس ها قرارش دادیم*/
+.nav {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+
+}
+.nav ul {
+display: flex;
+    width: 100%;
+    justify-content:center;
+    list-style-type: none;
+color: white;
+
+}
+.nav ul li {
+    font-size:14px;
+    margin: 8px 12px;
+}
+
+
+
+
+.wolf {
+    background-image: url("../images/www.svg");
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit:cover;
+    position: relative;
+}
+
+.wolf-title {
+    width: 100%;
+    text-align:center;
+    position: absolute;
+    top: 20%;
+}
+.wolf-title h1  {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+.wolf-title p {
+    color: white;
+    font-size: 15px;
+    width: 400px;
+    margin: 30px auto;
+}
+
+.wolf-content {
+    position: absolute;
+    left: 48%;
+    top: 70%;
+    font-weight: bold;
+
+}
+
+.wolf-content P {
+    direction: rtl;
+    color: black;
+    width: 500px;
+    margin: auto;
+    text-align: justify;
+}
+.wolff {
+    width: 394px;
+    position: absolute;
+    bottom: 0;
+    left: 2.2%;
+}
+.monkey {
+    background-image: url("../images/monkeytwo.svg");
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit:cover;
+    position: relative;
+
+}
+
+
+.monkey-title {
+    position: absolute;
+    left: 52%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 0 auto;
+    top: 20%;
+}
+
+.monkey-title h1 {
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.monkey .wolf-content {
+    left:15%;
+}
+.monkey .wolf-content p  {
+    color: white;
+    width: 700px;
+
+
+}
+
+.bird {
+    width: 200px;
+    position: absolute;
+top: 62%;
+    left: 74%;
+}
+
+.footer {
+    background-image: url("../images/lionbg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+
+
+}
+ .overlay {
+    background-color: #16021FEA;
+     height: 630px;
+}
+
+.footer-title {
+width: 100%;
+    text-align:center;
+    margin-top: 30px;
+}
+
+ .footer-title h1 {
+     font-size: 20px;
+     color: white;
+ }
+
+ .footer-title p {
+     font-size: 13px;
+     line-height: 3;
+     color: white;
+ }
+
+ /* برای اینکه تمامی محتویات فرم رو بیاریم زیر هم و وسط قرار بدیم از فلکس استفاده کردیم چون دکمه زیر و وسط اینپوت ها نبود*/
+ .register {
+     width: 300px;
+     /* از این مارجین برای وسط چین کردن کلشون استفاده کردیم*/
+     margin: 30px auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content:space-between;
+
+ }
+ .register .input {
+     width: 100%;
+    margin-top:10px;
+    outline: none;
+     border: none;
+padding: 10px 35px;
+     direction:rtl;
+     position: relative;
+ }
+
+ .register .input::placeholder {
+    position: absolute;
+     right: 10px;
+     font-weight: lighter;
+ }
+ .register .btn {
+     width: 150px;
+     margin-top:10px;
+     outline: none;
+     border: none;
+     padding: 10px 10px;
+     display: flex;
+     justify-content:center;
+     align-items: center;
+     font-weight: lighter;
+
+ }
+
+
+ .social {
+     width: 340px;
+     margin: 50px auto;
+ }
+ .social ul {
+     display: flex;
+     list-style: none;
+     align-items: center;
+     justify-content:space-between;
+ }
+
+ .description  {
+     width: 500px;
+     color: white;
+     margin: 0 auto;
+     direction:rtl;
+     text-align:justify;
+ }

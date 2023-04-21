@@ -1,0 +1,40 @@
+@media (min-width: 576px) {  }
+
+@media (min-width: 768px) {
+
+    .moon {
+        left: 42%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+.wolf-content  {
+    left: 50%;
+}
+    .wolf-content p {
+        width:380px;
+    }
+
+    .monkey-title {
+        left: 60%;
+    }
+.monkey .wolf-content {
+    left: 3%;
+}
+.monkey .wolf-content p {
+    width:700px;
+
+}
+
+
+/* اینجا چون ما از margin-auto برای وسط چین کردن تمام المان های فوتر استفاده کرده بودیم وقتی صفحه کوچک تر شد وسط چین المان ها هم بهم ریخت با دادن فقط یک display:flex تمامی موارد دوباره وسط چین شدن                                                                                                    */
+.overlay {
+    display: flex;
+}
+}
+
+@media (min-width: 1200px) {  }
+
+@media (min-width: 1400px) {
+
+}
